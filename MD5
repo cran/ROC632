@@ -1,0 +1,13 @@
+9463a7db6a66beb67e6f7f4c01730652 *DESCRIPTION
+a1f643f15604b227884903accbf328bf *NAMESPACE
+4583f230d6ce3301ff42a78f2443a616 *R/prog.R
+e0a17400b2ee4fdea2af35517a02b620 *data/DLBCLgenes.rda
+21401272117b0d6e3fe39cb75f91f17e *data/DLBCLpatients.rda
+b5dcae605a8c5d92c459de49510bcd92 *data/datalist
+5acb3c44f4b6bd0bc65ddbef8821d30f *man/AUC.Rd
+88e4bb9776a48c7e5a8302731765ca0d *man/DLBCLgenes.Rd
+a1732fb6fdd3741fa8a96123af24bb99 *man/DLBCLpatients.Rd
+6defa5084e430873089d89da6d926c88 *man/ROC.Rd
+4bb061c719575c17586d29fbc57781b9 *man/ROC632-package.Rd
+1d309bf1af3dba135ae774d7c7322bf0 *man/boot.ROC.Rd
+4f1e7150ce193c2bf9216435be8a9f52 *man/boot.ROCt.Rd
