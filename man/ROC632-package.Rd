@@ -11,8 +11,8 @@ This package can be used for proposing prognostic scoring systems based on few e
 \tabular{ll}{
 Package: \tab ROC632 \cr
 Type: \tab Package \cr
-Version: \tab 0.5 \cr
-Date: \tab 2013-26-12 \cr
+Version: \tab 0.6 \cr
+Date: \tab 2013-27-12 \cr
 License: \tab GPL (>=2) \cr
 LazyLoad: \tab yes \cr
 }

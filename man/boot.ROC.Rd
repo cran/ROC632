@@ -47,21 +47,16 @@ data(DLBCLpatients)
 data(DLBCLgenes)
 
 # In this exemple, we only reduce the number
-# of features and iterations for time-saving
+# of features, threasholds and iterations for time-saving
 
-DLBCLgenes <- DLBCLgenes[,1:1000] # 1000 first features
-N.iterations <- 5
+DLBCLgenes <- DLBCLgenes[,1:500] # 500 first features
+N.iterations <- 2
 
-# If we define a priori the tuning parameter at 10.
+# If we define a priori the tuning parameter at 15.
 
 res <- boot.ROC(status=DLBCLpatients$f,
  features=DLBCLgenes, N.boot=N.iterations,
- precision=seq(0.05, 0.95, by=0.10), lambda1=10)
-
-# The regression coefficients associated
-# with the logistic regression with lasso penalty
-coefficients(res$Model, "all")
-res$Coef
+ precision=seq(0.05, 0.95, by=0.30), lambda1=15)
 
 # The distribution of the prognostic score
 hist(res$Signature, nclass=30, main="",

@@ -21,7 +21,6 @@ the data is published at http://llmpp.nih.gov/lymphoma/data.shtml.
 Rosenwald et al. The use of molecular profiling to predict survival after chemotherapy for diffuse large-b-cell lymphoma. New England Journal of Medicine, 346(25):1937-47, 2002.
 
 
-
 Alizadeh et al. Distinct types of diffuse large b-cell lymphoma identified by gene expression profiling. Nature, 403(6769):503-11, 2000.
 }
 \examples{

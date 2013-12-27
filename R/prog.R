@@ -54,7 +54,7 @@ pen0 <- penalized(Surv(.Data$t, .Data$f), penalized = .E,
 
 Coef0  <- coefficients(pen0, "all")
 
-Score0 <- .E %*% coefficients(pen0, "all")
+Score0 <- as.vector(.E %*% coefficients(pen0, "all"))
 
 if (sd(Score0)==0) {Score0 <- (Score0 - mean(Score0)) / sd(Score0)}
 
@@ -100,7 +100,7 @@ fp.valid[i,]<-1-precision
 i <- i + 1
 } else {
 
-Data.b$S.l1 <- Eb %*% B.train[i,]
+Data.b$S.l1 <- as.vector(Eb %*% B.train[i,])
 
 sd.train[i] <- sd(Data.b$S.l1)
 
@@ -122,7 +122,7 @@ fp.train[i,]<-ROCt.l1$FP[-1]
 
 Eb <- .E[-unique(sort(num)),] ; Data.b <- .Data[-unique(sort(num)),]
 
-Data.b$S.l1 <- Eb %*% B.train[i,]
+Data.b$S.l1 <- as.vector(Eb %*% B.train[i,])
 Data.b$S.l1 <- (Data.b$S.l1 - mean.train[i]) / sd.train[i]
 
 ROCt.l1 <- try(survivalROC(Stime = Data.b$t, status = Data.b$f, marker = Data.b$S.l1, predict.time = pro.time, cut.values = cut.off, method = "NNE", lambda = prop), silent = TRUE)
@@ -200,7 +200,7 @@ pen0 <- penalized(Surv(.Data$t, .Data$f), penalized = .E,
 
 Coef0  <- coefficients(pen0, "all")
 
-Score0 <- .E %*% coefficients(pen0, "all")
+Score0 <- as.vector(.E %*% coefficients(pen0, "all"))
 
 if (sd(Score0)==0) {Score0 <- (Score0 - mean(Score0)) / sd(Score0)}
 
@@ -246,7 +246,7 @@ fp.valid[i,]<-1-precision
 i <- i + 1
 } else {
 
-Data.b$S.l1 <- Eb %*% B.train[i,]
+Data.b$S.l1 <- as.vector(Eb %*% B.train[i,])
 
 sd.train[i] <- sd(Data.b$S.l1)
 
@@ -268,7 +268,7 @@ fp.train[i,]<-ROCt.l1$FP[-1]
 
 Eb <- .E[-unique(sort(num)),] ; Data.b <- .Data[-unique(sort(num)),]
 
-Data.b$S.l1 <- Eb %*% B.train[i,]
+Data.b$S.l1 <- as.vector(Eb %*% B.train[i,])
 Data.b$S.l1 <- (Data.b$S.l1 - mean.train[i]) / sd.train[i]
 
 ROCt.l1 <- try(survivalROC(Stime = Data.b$t, status = Data.b$f, marker = Data.b$S.l1, predict.time = pro.time, cut.values = cut.off, method = "NNE", lambda = prop), silent = TRUE)
@@ -357,7 +357,7 @@ pen0 <- try(penalized(.Data$f, penalized = .E,
  
 Coef0 <- coefficients(pen0, "all")[-1]
 
-Score0 <- .E %*% coefficients(pen0, "all")[-1]
+Score0 <- as.vector(.E %*% coefficients(pen0, "all")[-1])
 
 if (sd(Score0)==0) {Score0 <- (Score0 - mean(Score0)) / sd(Score0)}
 
@@ -398,7 +398,7 @@ fp.valid[i,]<-1-precision
 i <- i + 1
 } else {
 
-Data.b$S.l1 <- Eb %*% B.train[i,]
+Data.b$S.l1 <- as.vector(Eb %*% B.train[i,])
 
 sd.train[i] <- sd(Data.b$S.l1)
 
@@ -420,7 +420,7 @@ fp.train[i,]<-ROCt.l1$FP
 
 Eb <- .E[-unique(sort(num)),] ; Data.b <- .Data[-unique(sort(num)),]
 
-Data.b$S.l1 <- Eb %*% B.train[i,]
+Data.b$S.l1 <- as.vector(Eb %*% B.train[i,])
 Data.b$S.l1 <- (Data.b$S.l1 - mean.train[i]) / sd.train[i]
 
 ROCt.l1 <- try(ROC(status = Data.b$f, marker = Data.b$S.l1, cut.values = cut.off), silent = TRUE)
@@ -497,7 +497,7 @@ pen0 <- try(penalized(.Data$f, penalized = .E,
  
 Coef0 <- coefficients(pen0, "all")[-1]
 
-Score0 <- .E %*% coefficients(pen0, "all")[-1]
+Score0 <- as.vector(.E %*% coefficients(pen0, "all")[-1])
 
 if (sd(Score0)==0) {Score0 <- (Score0 - mean(Score0)) / sd(Score0)}
 
@@ -538,7 +538,7 @@ fp.valid[i,]<-1-precision
 i <- i + 1
 } else {
 
-Data.b$S.l1 <- Eb %*% B.train[i,]
+Data.b$S.l1 <- as.vector(Eb %*% B.train[i,])
 
 sd.train[i] <- sd(Data.b$S.l1)
 
@@ -560,7 +560,7 @@ fp.train[i,]<-ROCt.l1$FP
 
 Eb <- .E[-unique(sort(num)),] ; Data.b <- .Data[-unique(sort(num)),]
 
-Data.b$S.l1 <- Eb %*% B.train[i,]
+Data.b$S.l1 <- as.vector(Eb %*% B.train[i,])
 Data.b$S.l1 <- (Data.b$S.l1 - mean.train[i]) / sd.train[i]
 
 ROCt.l1 <- try(ROC(status = Data.b$f, marker = Data.b$S.l1, cut.values = cut.off), silent = TRUE)
